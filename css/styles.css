@@ -1,0 +1,10 @@
+body.index-page {
+  background-color: #f0f0f0;
+  border-radius: 30px;
+
+}
+
+html {
+  background-color: #7f00ff;
+  background-image: linear-gradient(to bottom, #7f00ff, #00dbde);
+}
