@@ -1,7 +1,7 @@
 html {
   height: 100%;
   margin: 0;
-  padding-bottom: 4rem; /* space for footer */
+  padding-bottom: 7.7rem; /* space for footer */
   background-color: #222; /* dark outer area */
   background-image: linear-gradient(180deg, #6f00ff 0%, #008f8f 100%);
 }
