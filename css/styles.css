@@ -163,13 +163,36 @@ nav .nav-link {
   .profile-pic { width: 240px; height: 240px; }
 }
 
+/* Skills list layout */
+.skills-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
 .skill {
-  background-color: lightgray;
-  border-radius: 10px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-bottom: 0.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background: linear-gradient(180deg, #f2f2f2, #e6e6e6);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 6px 16px rgba(15,15,15,0.12);
+  margin-bottom: 0;
+  border-left: 6px solid rgba(111,0,255,0.12);
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.skill:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(15,15,15,0.18);
+  border-left-color: rgba(111,0,255,0.28);
+}
+
+.skill h2 {
+  margin: 0 0 0.35rem 0;
+  font-size: 1.25rem;
+  color: #111;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 .skill-description {
@@ -177,10 +200,27 @@ nav .nav-link {
   padding-top: 0.25rem;
   font-size: 0.95rem;
   color: #333;
+  line-height: 1.5;
 }
 
-h2 {
-  margin: 0.75rem 0 0.25rem 0;
-  font-size: 2rem;
+/* Page heading */
+h1 {
+  font-size: 2.2rem;
+  margin: 0 0 1rem 0;
   color: #111;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+
+@media (min-width: 820px) {
+  .skills-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  body.index-page { max-width: 980px; }
+}
+
+@media (max-width: 420px) {
+  .skill { padding: 0.85rem; }
+  h1 { font-size: 1.6rem; }
 }
