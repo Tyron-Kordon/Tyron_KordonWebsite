@@ -2,8 +2,13 @@ html {
   height: 100%;
   margin: 0;
   padding-bottom: 7.7rem; /* space for footer */
-  background-color: #222; /* dark outer area */
-  background-image: linear-gradient(180deg, #6f00ff 0%, #008f8f 100%);
+  background-color: #1a0b3a; /* dark base to enhance contrast */
+  /* vibrant purple-to-teal background using radial highlight + linear gradient */
+  background-image:
+    radial-gradient(900px 420px at 50% 0%, rgba(111,0,255,0.95), rgba(111,0,255,0) 35%),
+    linear-gradient(180deg, #6f00ff 4%, #4a3bd6 30%, #1f7fb0 60%, #008f8f 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* Centered white card with rounded corners and teal border */
@@ -150,11 +155,32 @@ nav .nav-link {
 
 .nav-buttons button:hover { transform: translateY(-3px); }
 
-@media (max-width: 640px) {
-  body.index-page { margin: 0.5rem; padding: 1.5rem; }
+@media (max-width: 402px) {
+  body.index-page { margin: 1rem; padding: 1rem; }
   .about-me h2 { font-size: 2rem; }
   .nav-buttons { gap: 0.6rem 0.8rem; }
   .nav-buttons button { padding: 0.6rem 1.2rem; }
   .profile-pic { width: 240px; height: 240px; }
 }
 
+.skill {
+  background-color: lightgray;
+  border-radius: 10px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.skill-description {
+  margin: 0;
+  padding-top: 0.25rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+h2 {
+  margin: 0.75rem 0 0.25rem 0;
+  font-size: 2rem;
+  color: #111;
+}
