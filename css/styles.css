@@ -1,0 +1,226 @@
+html {
+  height: 100%;
+  margin: 0;
+  padding-bottom: 7.7rem; /* space for footer */
+  background-color: #1a0b3a; /* dark base to enhance contrast */
+  /* vibrant purple-to-teal background using radial highlight + linear gradient */
+  background-image:
+    radial-gradient(900px 420px at 50% 0%, rgba(111,0,255,0.95), rgba(111,0,255,0) 35%),
+    linear-gradient(180deg, #6f00ff 4%, #4a3bd6 30%, #1f7fb0 60%, #008f8f 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Centered white card with rounded corners and teal border */
+body.index-page {
+  max-width: 600px;
+  margin: 1rem auto;
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  border: none; /* remove blue/teal outline */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 3rem);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  padding-top: 0.2rem;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #111;
+  text-decoration: none;
+}
+
+.header-title:link {
+  text-decoration: none;
+}
+
+
+header > a,
+header > a:link,
+header > a:visited,
+header > a:hover,
+header > a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+header > a .header-title { text-decoration: none; }
+
+nav .nav-link {
+  text-decoration: none;
+  color: #222;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Footer text styling */
+.footer-nav p, .footer-links {
+  color: #111;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#Tyron-Kordon { margin: 0; }
+
+.profile-pic {
+  display: block;
+  margin: 0.5rem auto 1.1rem auto;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.about-me {
+  text-align: center;
+  padding: 0 0.5rem 1.25rem 0.5rem;
+}
+
+.about-me h2 {
+  font-size: 2.6rem;
+  margin: 0 0 1rem 0;
+  font-weight: 800;
+}
+
+.about-me p {
+  max-width: 44rem;
+  margin: 0.5rem auto;
+  line-height: 1.8;
+  color: #222;
+  font-size: 1.05rem;
+}
+
+/* Navigation buttons styled like pills */
+.nav-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  gap: 1rem 1.25rem;
+  justify-content: center;
+  padding: 2rem 0 1.2rem 0;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.nav-buttons button {
+  border: none;
+  color: #fff;
+  padding: 0.65rem 1.6rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+.fähigkeiten-button { background: #344650; }
+.kontakt-button {
+  background: #e45a44;
+  grid-column: 1 / -1;
+  justify-self: center;
+  min-width: 140px;
+}
+.portfolio-button { background: #2fb46a; }
+
+.nav-buttons button:hover { transform: translateY(-3px); }
+
+@media (max-width: 402px) {
+  body.index-page { margin: 1rem; padding: 1rem; }
+  .about-me h2 { font-size: 2rem; }
+  .nav-buttons { gap: 0.6rem 0.8rem; }
+  .nav-buttons button { padding: 0.6rem 1.2rem; }
+  .profile-pic { width: 240px; height: 240px; }
+}
+
+/* Skills list layout */
+.skills-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.skill {
+  background: linear-gradient(180deg, #f2f2f2, #e6e6e6);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 6px 16px rgba(15,15,15,0.12);
+  margin-bottom: 0;
+  border-left: 6px solid rgba(111,0,255,0.12);
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.skill:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(15,15,15,0.18);
+  border-left-color: rgba(111,0,255,0.28);
+}
+
+.skill h2 {
+  margin: 0 0 0.35rem 0;
+  font-size: 1.25rem;
+  color: #111;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.skill-description {
+  margin: 0;
+  padding-top: 0.25rem;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Page heading */
+h1 {
+  font-size: 2.2rem;
+  margin: 0 0 1rem 0;
+  color: #111;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+
+@media (min-width: 820px) {
+  .skills-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  body.index-page { max-width: 980px; }
+}
+
+@media (max-width: 420px) {
+  .skill { padding: 0.85rem; }
+  h1 { font-size: 1.6rem; }
+}
