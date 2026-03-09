@@ -5,7 +5,11 @@ html {
   background-color: #1a0b3a; /* dark base to enhance contrast */
   /* vibrant purple-to-teal background using radial highlight + linear gradient */
   background-image:
-    radial-gradient(900px 420px at 50% 0%, rgba(111,0,255,0.95), rgba(111,0,255,0) 35%),
+    radial-gradient(
+      900px 420px at 50% 0%,
+      rgba(111, 0, 255, 0.95),
+      rgba(111, 0, 255, 0) 35%
+    ),
     linear-gradient(180deg, #6f00ff 4%, #4a3bd6 30%, #1f7fb0 60%, #008f8f 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -19,6 +23,24 @@ body.index-page {
   border-radius: 28px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
   border: none; /* remove blue/teal outline */
+
+  /* Portfolio: ensure page title stays above images and images are centered */
+  h1 {
+    position: relative;
+    z-index: 20;
+    display: inline-block;
+    background: #fff;
+    padding: 0 0.6rem;
+    margin-top: 0.6rem;
+    text-align: center;
+  }
+
+  /* header nav underline on hover (applies on Portfolio too) */
+  header .nav-link:hover,
+  header .nav-link:focus {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -47,7 +69,6 @@ header {
   text-decoration: none;
 }
 
-
 header > a,
 header > a:link,
 header > a:visited,
@@ -57,7 +78,9 @@ header > a:active {
   color: inherit;
 }
 
-header > a .header-title { text-decoration: none; }
+header > a .header-title {
+  text-decoration: none;
+}
 
 nav .nav-link {
   text-decoration: none;
@@ -80,7 +103,8 @@ nav .nav-link {
 }
 
 /* Footer text styling */
-.footer-nav p, .footer-links {
+.footer-nav p,
+.footer-links {
   color: #111;
   font-size: 0.9rem;
 }
@@ -91,7 +115,9 @@ nav .nav-link {
   gap: 0.5rem;
 }
 
-#Tyron-Kordon { margin: 0; }
+#Tyron-Kordon {
+  margin: 0;
+}
 
 .profile-pic {
   display: block;
@@ -101,7 +127,7 @@ nav .nav-link {
   object-fit: cover;
   border-radius: 50%;
   border: none;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 .about-me {
@@ -141,26 +167,44 @@ nav .nav-link {
   border-radius: 20px;
   font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
 
-.fähigkeiten-button { background: #344650; }
+.fähigkeiten-button {
+  background: #344650;
+}
 .kontakt-button {
   background: #e45a44;
   grid-column: 1 / -1;
   justify-self: center;
   min-width: 140px;
 }
-.portfolio-button { background: #2fb46a; }
+.portfolio-button {
+  background: #2fb46a;
+}
 
-.nav-buttons button:hover { transform: translateY(-3px); }
+.nav-buttons button:hover {
+  transform: translateY(-3px);
+}
 
 @media (max-width: 402px) {
-  body.index-page { margin: 1rem; padding: 1rem; }
-  .about-me h2 { font-size: 2rem; }
-  .nav-buttons { gap: 0.6rem 0.8rem; }
-  .nav-buttons button { padding: 0.6rem 1.2rem; }
-  .profile-pic { width: 240px; height: 240px; }
+  body.index-page {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  .about-me h2 {
+    font-size: 2rem;
+  }
+  .nav-buttons {
+    gap: 0.6rem 0.8rem;
+  }
+  .nav-buttons button {
+    padding: 0.6rem 1.2rem;
+  }
+  .profile-pic {
+    width: 240px;
+    height: 240px;
+  }
 }
 
 /* Skills list layout */
@@ -175,16 +219,19 @@ nav .nav-link {
   background: linear-gradient(180deg, #f2f2f2, #e6e6e6);
   border-radius: 12px;
   padding: 1rem;
-  box-shadow: 0 6px 16px rgba(15,15,15,0.12);
+  box-shadow: 0 6px 16px rgba(15, 15, 15, 0.12);
   margin-bottom: 0;
-  border-left: 6px solid rgba(111,0,255,0.12);
-  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+  border-left: 6px solid rgba(111, 0, 255, 0.12);
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    border-color 200ms ease;
 }
 
 .skill:hover {
   transform: translateY(-6px);
-  box-shadow: 0 14px 30px rgba(15,15,15,0.18);
-  border-left-color: rgba(111,0,255,0.28);
+  box-shadow: 0 14px 30px rgba(15, 15, 15, 0.18);
+  border-left-color: rgba(111, 0, 255, 0.28);
 }
 
 .skill h2 {
@@ -211,16 +258,45 @@ h1 {
   padding: 0.5rem 0.5rem 0 0.5rem;
 }
 
-
 @media (min-width: 820px) {
   .skills-list {
     grid-template-columns: 1fr 1fr;
     gap: 1.25rem;
   }
-  body.index-page { max-width: 980px; }
+  body.index-page {
+    max-width: 980px;
+  }
 }
 
 @media (max-width: 420px) {
-  .skill { padding: 0.85rem; }
-  h1 { font-size: 1.6rem; }
+  .skill {
+    padding: 0.85rem;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+
+.project-title {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 0.5rem 0 0.25rem 0;
+  color: #111;
+  font-weight: 500;
+}
+
+.project-description {
+  color: #333;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.project-image {
+  display: block;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
