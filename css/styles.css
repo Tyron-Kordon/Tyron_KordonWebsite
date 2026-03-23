@@ -109,6 +109,38 @@ nav .nav-link {
   font-size: 0.9rem;
 }
 
+h1, .page-title {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.2rem;
+  line-height: 1.05;
+  margin: 0 0 1rem 0;
+  color: #111;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.project-title, .about-me h2, .contact-column h2, h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.15;
+  margin: 1.25rem 0 0.75rem 0;
+  color: #111;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (max-width: 420px) {
+  h1, .page-title {
+    font-size: 1.6rem;
+  }
+  h2, .project-title {
+    font-size: 1.25rem;
+  }
+}
+
+/* If any page needs a different heading style later, add a
+   page-specific selector (eg. .skills-page h2) to override these. */
 .footer-links {
   display: flex;
   align-items: center;
@@ -135,8 +167,8 @@ nav .nav-link {
   padding: 0 0.5rem 1.25rem 0.5rem;
 }
 
-.about-me h2 {
-  font-size: 2.6rem;
+.about-me h1 {
+  font-size: 2.0rem;
   margin: 0 0 1rem 0;
   font-weight: 800;
 }
@@ -192,7 +224,7 @@ nav .nav-link {
     margin: 1rem;
     padding: 1rem;
   }
-  .about-me h2 {
+  .about-me h1 {
     font-size: 2rem;
   }
   .nav-buttons {
@@ -207,7 +239,6 @@ nav .nav-link {
   }
 }
 
-/* Skills list layout */
 .skills-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -250,7 +281,6 @@ nav .nav-link {
   line-height: 1.5;
 }
 
-/* Page heading */
 h1 {
   font-size: 2.2rem;
   margin: 0 0 1rem 0;
@@ -299,4 +329,11 @@ h1 {
   height: auto;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.page-title {
+  font-size: 2rem;
+  text-align: center;
+  color: #111;
+  padding: 0.5rem;
 }
