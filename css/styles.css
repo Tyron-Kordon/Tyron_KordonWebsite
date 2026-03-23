@@ -336,4 +336,7 @@ h1 {
   text-align: center;
   color: #111;
   padding: 0.5rem;
+  display: block;
+  margin: 0 auto 1rem;
+  width: 100%;
 }
