@@ -138,8 +138,7 @@ h1, .page-title {
   }
 }
 
-/* If any page needs a different heading style later, add a
-   page-specific selector (eg. .skills-page h2) to override these. */
+
 .footer-links {
   display: flex;
   align-items: center;
@@ -338,4 +337,86 @@ h1 {
   display: block;
   margin: 0 auto 1rem;
   width: 100%;
+}
+
+/* Kontakt page specific layout adjustments */
+main {
+  padding: 0 1.25rem 1.5rem 1.25rem;
+}
+
+.contact-photo {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.contact-image {
+  width: 340px;
+  max-width: 80%;
+  height: auto;
+  display: inline-block;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+.contact-layout {
+  padding: 0 0.6rem 2.5rem 0.6rem;
+  display: block;
+}
+
+.contact-column {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+  color: #111;
+}
+
+.contact-column h2 {
+  text-align: left;
+  font-size: 2rem;
+  margin: 2.5rem 0 0.6rem 0;
+  font-weight: 800;
+  color: #111;
+}
+
+.contact-column p {
+  text-align: left;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #222;
+  margin: 0 0 1.25rem 0;
+}
+
+/* Footer spacing similar to screenshot: three items spaced evenly */
+.footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.5rem 0;
+}
+
+@media (max-width: 420px) {
+  .contact-image {
+    width: 320px;
+    max-width: 78%;
+  }
+  .contact-column h2 {
+    font-size: 1.8rem;
+  }
+  .contact-column p {
+    font-size: 1rem;
+  }
+  body.index-page {
+    padding: 1.2rem;
+  }
+}
+
+.instagram-link{
+  text-decoration: none;
+}
+
+.instagram-link:hover {
+  color: #401482;
+  font-weight: 600;
 }
