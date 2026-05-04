@@ -382,18 +382,15 @@ main {
     padding-right: 1rem;
     padding-top: 1rem;
   }
-}
 
-@media (min-width: 800px) {
   .nav-link {
     font-size: 1rem;
   }
-}
 
-@media (min-width: 800px) {
   .footer-nav {
     justify-content: space-between;
   }
+
 }
 
   @media (min-width: 1440px) {
