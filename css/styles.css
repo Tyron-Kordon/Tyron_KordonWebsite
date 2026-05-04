@@ -15,36 +15,20 @@ html {
   background-attachment: fixed;
 }
 
-/* Centered white card with rounded corners and teal border */
+/* Global typography and base layout for index page */
 body.index-page {
   padding: 20px;
   background: #fff;
   border-radius: 28px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
   border: none; /* remove blue/teal outline */
-
-  /* Portfolio: ensure page title stays above images and images are centered */
-  h1 {
-    position: relative;
-    z-index: 20;
-    display: inline-block;
-    padding: 0 0.6rem;
-    margin-top: 0.6rem;
-    text-align: center;
-  }
-
-  /* header nav underline on hover (applies on Portfolio too) */
-  header .nav-link:hover,
-  header .nav-link:focus {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 3rem);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
 header {
   display: flex;
@@ -63,10 +47,6 @@ header {
   text-decoration: none;
 }
 
-.header-title:link {
-  text-decoration: none;
-}
-
 header > a,
 header > a:link,
 header > a:visited,
@@ -76,16 +56,13 @@ header > a:active {
   color: inherit;
 }
 
-header > a .header-title {
-  text-decoration: none;
-}
-
 .nav-link {
   text-decoration: none;
   color: #222;
   font-size: 0.75rem;
   font-weight: 600;
 }
+
 
 .footer {
   margin-top: auto;
@@ -107,6 +84,8 @@ header > a .header-title {
   font-size: 0.9rem;
 }
 
+
+/* Headings */
 h1,
 .page-title {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -121,8 +100,7 @@ h1,
 
 .project-title,
 .about-me h2,
-.contact-column h2,
-h1 {
+.contact-column h2 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.6rem;
   line-height: 1.15;
@@ -131,6 +109,7 @@ h1 {
   font-weight: 700;
   text-align: center;
 }
+
 
 .footer-links {
   display: flex;
@@ -153,6 +132,7 @@ h1 {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
+
 .about-me {
   text-align: center;
   padding: 0 0.5rem 1.25rem 0.5rem;
@@ -173,6 +153,7 @@ h1 {
 }
 
 /* Navigation buttons styled like pills */
+
 .nav-buttons {
   display: grid;
   grid-template-columns: repeat(2, minmax(140px, 1fr));
@@ -210,12 +191,14 @@ h1 {
   transform: translateY(-3px);
 }
 
+
 .skills-list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
   padding: 0.5rem;
 }
+
 
 .skill {
   background: linear-gradient(180deg, #f2f2f2, #e6e6e6);
@@ -224,10 +207,7 @@ h1 {
   box-shadow: 0 6px 16px rgba(15, 15, 15, 0.12);
   margin-bottom: 0;
   border-left: 6px solid rgba(111, 0, 255, 0.12);
-  transition:
-    transform 200ms ease,
-    box-shadow 200ms ease,
-    border-color 200ms ease;
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
 }
 
 .skill:hover {
@@ -259,6 +239,7 @@ h1 {
   padding: 0.5rem 0.5rem 0 0.5rem;
 }
 
+
 @media (min-width: 820px) {
   .skills-list {
     grid-template-columns: 1fr 1fr;
@@ -268,6 +249,7 @@ h1 {
     max-width: 980px;
   }
 }
+
 
 .project-title {
   font-size: 1.3rem;
@@ -284,7 +266,7 @@ h1 {
 }
 
 .project-image {
-  display: block;
+  display: flex;
   margin-bottom: 1rem;
   width: 100%;
   max-width: 400px;
@@ -304,6 +286,7 @@ h1 {
 }
 
 /* Kontakt page specific layout adjustments */
+
 main {
   padding: 0 1.25rem 1.5rem 1.25rem;
 }
@@ -351,6 +334,7 @@ main {
 }
 
 /* Footer spacing similar to screenshot: three items spaced evenly */
+
 .footer-nav {
   display: flex;
   align-items: center;
@@ -369,7 +353,7 @@ main {
   font-weight: 600;
 }
 
-/* ===== IPAD LAYOUT ===== */
+/* ===== IPAD/LAPTOP/LARGE LAYOUTS ===== */
 
 @media (min-width: 800px) {
   .header-title {
@@ -390,65 +374,69 @@ main {
   .footer-nav {
     justify-content: space-between;
   }
-
 }
 
-  @media (min-width: 1440px) {
-    body.index-page {
-      width: 1200px;
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 40px;
-      border-radius: 28px;
-    }
-
-    /* Keep header and main content aligned to the centered card */
-    header {
-      width: 100%;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding-left: 0.75rem;
-      padding-right: 0.75rem;
-    }
-
-    main,
-    .contact-column,
-    .about-me {
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-      width: 100%;
-      max-width: 900px;
-    }
+@media (min-width: 1024px) {
+  body.index-page {
+    width: 1000px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 28px;
   }
 
-  /* Laptop Layout */
-  @media (min-width: 1024px) {
-    body.index-page {
-      width: 1000px;
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 40px;
-      border-radius: 28px;
-    }
-
-    /* Keep header and main content aligned to the centered card */
-    header {
-      width: 100%;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding-left: 0.75rem;
-      padding-right: 0.75rem;
-    }
-
-    main,
-    .contact-column,
-    .about-me {
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-      width: 100%;
-      max-width: 900px;
-    }
+  /* Keep header and main content aligned to the centered card */
+  header {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
+
+  main,
+  .contact-column,
+  .about-me {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+  }
+  /* Center project images on larger viewports */
+  .project-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  body.index-page {
+    width: 1200px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 28px;
+  }
+
+  /* Keep header and main content aligned to the centered card */
+  header {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  main,
+  .contact-column,
+  .about-me {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+  }
+}
 
