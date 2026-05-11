@@ -1,6 +1,8 @@
 html {
   height: 100%;
   margin: 0;
+  /* reduce overall size slightly: 15px (was 16px default) */
+  font-size: 15px;
   padding-bottom: 7.7rem; /* space for footer */
   background-color: #1a0b3a; /* dark base to enhance contrast */
   /* vibrant purple-to-teal background using radial highlight + linear gradient */
@@ -142,22 +144,26 @@ header > a:active {
 }
 
 @media (max-width: 600px) {
+  /* Stack footer items vertically and center them on small screens */
   .footer-nav {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.35rem;
   }
   .footer-left,
   .footer-center,
   .footer-right {
-    flex: 1 1 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.25rem 0;
   }
-  .footer-left { text-align: left; }
-  .footer-center { text-align: center; }
-  .footer-right { text-align: right; }
+  .footer-left { order: 1; }
+  .footer-center { order: 2; }
+  .footer-right { order: 3; }
   .footer-left p,
-  .footer-center a,
-  .footer-right a { font-size: 0.85rem; }
+  .footer-center .footer-links,
+  .footer-right .footer-links { font-size: 0.85rem; }
 }
 
 /* Headings */
