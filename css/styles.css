@@ -88,16 +88,18 @@ header > a:active {
 
 .github-link {
   text-decoration: none;
+  color: black;
 }
 
 .modulbaukasten-link {
   text-decoration: none;
+  color: black;
 }
 
 .github-link:hover,
 .modulbaukasten-link:hover {
-  color: #401482;
-  font-weight: 600;
+  color: #759ed8;
+  text-decoration: underline;
 }
 
 /* Headings */
@@ -432,7 +434,7 @@ main {
 
   .footer-nav p,
   .footer-links {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 }
 
@@ -466,6 +468,6 @@ main {
   /* Increase footer nav font size on larger viewports */
   .footer-nav p,
   .footer-links {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
   }
 }
