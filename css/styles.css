@@ -40,7 +40,7 @@ header {
 
 .header-title {
   margin: 0;
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   font-weight: 500;
   color: #111;
   text-decoration: none;
@@ -72,22 +72,92 @@ header > a:active {
 }
 
 /* Footer text styling */
-.footer-nav p,
-.footer-links {
-  color: #111;
-  font-size: 0.8rem;
+/* Footer layout split into three areas: left / center / right */
+.footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.5rem 0;
 }
 
+.footer-left,
+.footer-center,
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-left {
+  flex: 0 0 auto;
+}
+
+.footer-center {
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+.footer-right {
+  flex: 0 0 auto;
+  justify-content: flex-end;
+}
 .github-link,
 .modulbaukasten-link {
   text-decoration: none;
-  color: black;
+  color: #111;
+  font-weight: 500;
 }
 
 .github-link:hover,
 .modulbaukasten-link:hover {
-  color: #759ed8;
+  color: #111;
   text-decoration: underline;
+}
+
+/* Footer small text + spacing for mobile */
+.footer-left p,
+.footer-center a,
+.footer-right a {
+  font-size: 0.9rem;
+}
+
+.sep {
+  color: #111;
+  margin: 0 0.6rem;
+  font-weight: 500;
+}
+
+/* Spread footer links on larger viewports so they don't sit too centered */
+.footer-right .footer-links {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+@media (min-width: 800px) {
+  .footer-right .footer-links {
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-nav {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    flex: 1 1 0;
+  }
+  .footer-left { text-align: left; }
+  .footer-center { text-align: center; }
+  .footer-right { text-align: right; }
+  .footer-left p,
+  .footer-center a,
+  .footer-right a { font-size: 0.85rem; }
 }
 
 /* Headings */
@@ -334,11 +404,6 @@ main {
 /* Footer spacing similar to screenshot: three items spaced evenly */
 
 .footer-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 1rem;
-  width: 100%;
   padding: 1.5rem 0;
 }
 
