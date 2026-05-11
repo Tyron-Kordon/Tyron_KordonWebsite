@@ -71,14 +71,6 @@ header > a:active {
   padding-top: 1.25rem;
 }
 
-.footer-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  width: 100%;
-}
-
 /* Footer text styling */
 .footer-nav p,
 .footer-links {
@@ -86,11 +78,7 @@ header > a:active {
   font-size: 0.8rem;
 }
 
-.github-link {
-  text-decoration: none;
-  color: black;
-}
-
+.github-link,
 .modulbaukasten-link {
   text-decoration: none;
   color: black;
@@ -109,6 +97,7 @@ h1,
   font-size: 2.2rem;
   line-height: 1.05;
   margin: 0 0 1rem 0;
+  padding: 0.5rem 0.5rem 0 0.5rem;
   color: #111;
   font-weight: 800;
   text-align: center;
@@ -179,13 +168,15 @@ h1,
   margin: 0 auto;
 }
 
-.nav-buttons button {
+.nav-buttons a {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
   border: none;
   color: #fff;
   padding: 0.65rem 1.6rem;
   border-radius: 20px;
   font-size: 1rem;
-  cursor: pointer;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
 
@@ -202,7 +193,7 @@ h1,
   background: #2fb46a;
 }
 
-.nav-buttons button:hover {
+.nav-buttons a:hover {
   transform: translateY(-3px);
 }
 
@@ -248,13 +239,6 @@ h1,
   line-height: 1.5;
 }
 
-h1 {
-  font-size: 2.2rem;
-  margin: 0 0 1rem 0;
-  color: #111;
-  padding: 0.5rem 0.5rem 0 0.5rem;
-}
-
 @media (min-width: 820px) {
   .skills-list {
     grid-template-columns: 1fr 1fr;
@@ -280,16 +264,13 @@ h1 {
 }
 
 .project-image {
-  display: flex;
-  margin-bottom: 1rem;
+  display: block;
+  margin: 0 auto 1rem;
   width: 100%;
   max-width: 400px;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .page-title {
