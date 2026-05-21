@@ -350,6 +350,15 @@ h1,
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
+.project-video {
+  display: block;
+  margin: 0 auto 1rem;
+  width: 100%;
+  max-width: 640px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
 .page-title {
   font-size: 2rem;
   text-align: center;
