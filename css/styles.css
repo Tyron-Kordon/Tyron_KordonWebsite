@@ -69,6 +69,13 @@ header > a:active {
   text-decoration: underline;
 }
 
+#main-nav .nav-link:not(:last-child)::after {
+  content: " |";
+  margin-right: 0.25rem;
+  color: #222;
+  font-weight: 600;
+}
+
 /* Hamburger menu button */
 .hamburger {
   display: none;
@@ -226,6 +233,10 @@ header > a:active {
 
   #main-nav .nav-link {
     font-size: 1rem;
+  }
+
+  #main-nav .nav-link:not(:last-child)::after {
+    content: "";
   }
 }
 
@@ -417,7 +428,8 @@ h1,
   display: block;
   margin: 0 auto 1rem;
   width: 100%;
-  max-width: 640px;
+  max-width: 480px;
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
