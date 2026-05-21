@@ -9,9 +9,14 @@
   <body class="index-page">
     <header>
       <a href="index.html"><h3 class="header-title">Tyron Kordon</h3></a>
-      <nav>
-        <a href="Fähigkeiten.html" class="nav-link">Fähigkeiten |</a>
-        <a href="Portfolio.html" class="nav-link">Portfolio |</a>
+      <button class="hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="main-nav">
+        <a href="Fähigkeiten.html" class="nav-link">Fähigkeiten</a>
+        <a href="Portfolio.html" class="nav-link">Portfolio</a>
         <a href="Kontakt.html" class="nav-link">Kontakt</a>
       </nav>
     </header>
@@ -54,5 +59,14 @@
         </div>
       </nav>
     </footer>
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const nav = document.getElementById('main-nav');
+      hamburger.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('nav-open');
+        hamburger.classList.toggle('is-open', isOpen);
+        hamburger.setAttribute('aria-expanded', String(isOpen));
+      });
+    </script>
   </body>
 </html>
