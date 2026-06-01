@@ -159,6 +159,17 @@ header > a:active {
   text-decoration: underline;
 }
 
+.instagram-link {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+.instagram-link:hover {
+  color: #111;
+  text-decoration: underline;
+}
+
 /* Footer small text + spacing for mobile */
 .footer-left p,
 .footer-center a,
@@ -173,12 +184,6 @@ header > a:active {
 }
 
 /* Spread footer links on larger viewports so they don't sit too centered */
-.footer-right .footer-links {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
 @media (min-width: 800px) {
   .footer-right .footer-links {
     gap: 1.2rem;
